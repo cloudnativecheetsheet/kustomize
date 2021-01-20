@@ -1,0 +1,14 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+resources:
+  - ../../base
+
+vars:
+  - name: NGINX_SERVICE
+    objref:
+      kind: Service
+      apiVersion: v1
+      name: nginx-service
+    fieldref:
+      fieldpath: metadata.name

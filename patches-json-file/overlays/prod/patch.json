@@ -1,0 +1,14 @@
+[
+  {
+    "op": "add",
+    "path": "/spec/template/spec/containers/0/livenessProbe",
+    "value": {
+      "httpGet": {
+        "port": 80,
+        "path": "/"
+      },
+      "failureThreshold": 5,
+      "periodSeconds": 5
+    }
+  }
+]

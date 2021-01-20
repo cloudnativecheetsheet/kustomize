@@ -1,0 +1,9 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+configMapGenerator:
+- name: my-configmap
+  files:
+  - common.properties
+  literals:
+  - port=8080
